@@ -14,6 +14,8 @@
 		F216D496299AB13C006E4BE6 /* ChatGPTDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D495299AB13C006E4BE6 /* ChatGPTDemoTests.swift */; };
 		F216D4A0299AB13C006E4BE6 /* ChatGPTDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D49F299AB13C006E4BE6 /* ChatGPTDemoUITests.swift */; };
 		F216D4A2299AB13C006E4BE6 /* ChatGPTDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4A1299AB13C006E4BE6 /* ChatGPTDemoUITestsLaunchTests.swift */; };
+		F216D4B0299AB482006E4BE6 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = F216D4AF299AB482006E4BE6 /* OpenAISwift */; };
+		F216D4B2299AB8E8006E4BE6 /* ContentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216D4B1299AB8E8006E4BE6 /* ContentVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		F216D49B299AB13C006E4BE6 /* ChatGPTDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F216D49F299AB13C006E4BE6 /* ChatGPTDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTDemoUITests.swift; sourceTree = "<group>"; };
 		F216D4A1299AB13C006E4BE6 /* ChatGPTDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F216D4B1299AB8E8006E4BE6 /* ContentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F216D4B0299AB482006E4BE6 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				F216D484299AB13B006E4BE6 /* ChatGPTDemoApp.swift */,
 				F216D486299AB13B006E4BE6 /* ContentView.swift */,
+				F216D4B1299AB8E8006E4BE6 /* ContentVM.swift */,
 				F216D488299AB13C006E4BE6 /* Assets.xcassets */,
 				F216D48A299AB13C006E4BE6 /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = ChatGPTDemo;
+			packageProductDependencies = (
+				F216D4AF299AB482006E4BE6 /* OpenAISwift */,
+			);
 			productName = ChatGPTDemo;
 			productReference = F216D481299AB13B006E4BE6 /* ChatGPTDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = F216D478299AB13B006E4BE6;
+			packageReferences = (
+				F216D4AE299AB482006E4BE6 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = F216D482299AB13B006E4BE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F216D4B2299AB8E8006E4BE6 /* ContentVM.swift in Sources */,
 				F216D487299AB13B006E4BE6 /* ContentView.swift in Sources */,
 				F216D485299AB13B006E4BE6 /* ChatGPTDemoApp.swift in Sources */,
 			);
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F216D4AE299AB482006E4BE6 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F216D4AF299AB482006E4BE6 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F216D4AE299AB482006E4BE6 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F216D479299AB13B006E4BE6 /* Project object */;
 }
